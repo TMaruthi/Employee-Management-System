@@ -1,0 +1,5 @@
+package com.ihub.www.Repository;
+
+public interface Employeerepository {
+
+}

@@ -1,0 +1,19 @@
+package com.ihub.www;
+@Entity
+@table
+
+public class employee {
+
+@id
+private	int id;
+@column
+private String firstname;
+@column
+private String lastname;
+@column
+private String  email;
+@column
+private int salary;
+	
+
+}
