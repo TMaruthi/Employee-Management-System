@@ -1,4 +1,3 @@
-package com.ihub.www.controller;
 
 package com.ihub.www.controller;
 
@@ -41,19 +40,19 @@ public class EmployeeController
 	}
 	
 	@GetMapping("/employees/{id}")
-	public Employee getEmployeeById(@PathVariable Long id)
+	public Employee getEmployeeById(@PathVariable(name ="id") Long id)
 	{
 		return employeeService.getEmployeeById(id);
 	}
 	
 	@PutMapping("/employees/{id}")
-	public ResponseEntity<Employee> updateEmployee(@PathVariable Long id,@RequestBody Employee employee)
+	public ResponseEntity<Employee> updateEmployee(@PathVariable(name ="id")  Long id,@RequestBody Employee employee)
 	{
 		return employeeService.updateEmployee(id,employee);
 	}
 	
 	@DeleteMapping("/employees/{id}")
-	public ResponseEntity<HttpStatus> deleteEmployee(@PathVariable long id)
+	public ResponseEntity<HttpStatus> deleteEmployee(@PathVariable(name ="id")  long id)
 	{
 		return employeeService.deleteEmployee(id);
 		
